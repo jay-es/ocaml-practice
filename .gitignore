@@ -32,3 +32,5 @@ _opam/
 !.devcontainer/
 !.vscode/
 !scripts/
+
+!src/
