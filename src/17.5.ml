@@ -71,3 +71,21 @@ let test1 = tree_depth tree1 = 0
 let test2 = tree_depth tree2 = 1
 
 let test3 = tree_depth tree3 = 2
+
+(* 17.9 *)
+(* 多相の木を使って sum_tree を定義 *)
+type 'a tree_t = Empty | Leaf of 'a | Node of ('a tree_t * 'a * 'a tree_t)
+
+(* sum_tree: 'a tree_t -> int *)
+let rec sum_tree tree =
+  match tree with
+  | Empty -> 0
+  | Leaf n -> n
+  | Node (t1, n, t2) -> sum_tree t1 + n + sum_tree t2
+
+(* テスト *)
+let test1 = sum_tree Empty = 0
+
+let test2 = sum_tree (Leaf 7) = 7
+
+let test3 = sum_tree (Node (Empty, 5, Leaf 7)) = 12
