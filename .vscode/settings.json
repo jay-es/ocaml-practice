@@ -5,6 +5,7 @@
     "kind": "opam"
   },
   "[ocaml]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "files.autoGuessEncoding": true
   }
 }
