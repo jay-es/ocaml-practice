@@ -140,3 +140,23 @@ let test3 =
         "y",
         Black,
         Node (Empty, 15, "z", Black, Empty) )
+
+(* 20.4 *)
+(* 目的: 赤黒木の中から、指定したキーの値を探す *)
+(* search : ('a, 'b) rb_tree_t -> 'a -> 'b *)
+let rec search tree key =
+  match tree with
+  | Empty -> raise Not_found
+  | Node (left, k, v, c, right) ->
+      if k = key then v
+      else if k > key then search left key
+      else search right key
+
+(* テスト *)
+let test1 = try search Empty 1 with Not_found -> 0 = 0
+
+let test2 = search tree_a 1 = "A"
+
+let test3 = search result 1 = "A"
+
+let test4 = search result 5 = "X"
