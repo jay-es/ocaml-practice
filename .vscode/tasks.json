@@ -8,6 +8,12 @@
       "type": "shell",
       "command": "cd basis_of_programming && rlwrap ocaml",
       "problemMatcher": []
+    },
+    {
+      "label": "programming_in_ocaml",
+      "type": "shell",
+      "command": "cd programming_in_ocaml && rlwrap ocaml",
+      "problemMatcher": []
     }
   ]
 }
