@@ -4,9 +4,9 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "ocaml",
+      "label": "basis_of_programming",
       "type": "shell",
-      "command": "cd src && rlwrap ocaml",
+      "command": "cd basis_of_programming && rlwrap ocaml",
       "problemMatcher": []
     }
   ]
